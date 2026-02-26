@@ -1,5 +1,29 @@
 <main class="main">
-  <h1>Hola Mundo</h1>
+  <app-section bg="bg-gray-50">
+    <h1>Hero</h1>
+  </app-section>
+  <app-section>
+    <div class="flex flex-col gap-12">
+      <div class="flex flex-col gap-6">
+        <h2 class="text-3xl md:text-5xl font-bold">Lorem ipsum dolor sit</h2>
+        <div class="grid grid-cols-1 md:grid-cols-[1fr_300px] gap-4 items-center">
+          <p>Lorem ipsum dolor sit</p>
+          <app-search-input />
+        </div>      
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] gap-4">
+        <app-article-card />
+        <app-article-card />
+        <app-article-card />
+        <app-article-card />
+        <app-article-card />
+        <app-article-card />
+      </div>
+    </div>
+  </app-section>
+  <app-section>
+    <h2>Slider</h2>
+  </app-section>
 </main>
 
 <router-outlet />
