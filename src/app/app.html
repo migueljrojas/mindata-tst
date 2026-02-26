@@ -1,6 +1,6 @@
 <main class="main">
   <app-section bg="bg-gray-50">
-    <h1>Hero</h1>
+    <app-article-card [highlight]="true" [data]="articles()[0]" />
   </app-section>
   <app-section>
     <div class="flex flex-col gap-12">
@@ -11,18 +11,19 @@
           <app-search-input />
         </div>      
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] gap-4">
-        <app-article-card />
-        <app-article-card />
-        <app-article-card />
-        <app-article-card />
-        <app-article-card />
-        <app-article-card />
+      <div class="grid grid-cols-1 md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] gap-8">
+        @for (article of articles(); track article.title) {
+          <app-article-card [data]="article" />
+        }
       </div>
     </div>
   </app-section>
   <app-section>
-    <h2>Slider</h2>
+    <h2 class="text-3xl md:text-5xl font-bold">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et.</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>
+    <div>
+      <app-slider />
+    </div>
   </app-section>
 </main>
 

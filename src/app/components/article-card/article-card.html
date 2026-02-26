@@ -1,1 +1,20 @@
-<p>article-card works!</p>
+<div class="article-card" [class.article-card--main]="highlight()">
+    <a [href]="data().link" class="article-card__image">
+        <img [src]="imageUrl" alt="article-card-image" />
+    </a>
+    <div class="article-card__content">
+        <div class="article-card__date">
+            <img src="assets/calendar.svg" alt="calendar" />
+            <span>{{ data().date }}</span>
+        </div>
+        <h3 class="article-card__title">
+            <a [href]="data().link">{{ data().title }}</a>
+        </h3>
+        <p class="article-card__description">{{ !highlight() && data().content.length > 360 ? data().content.slice(0, 360) + '...' : data().content }}</p>
+        @if (highlight()) {
+            <div class="article-card__cta">
+                <a [href]="data().link" class="article-card__cta-link">Loren ipsum.</a>
+            </div>
+        }
+    </div>
+</div>
