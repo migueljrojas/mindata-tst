@@ -1,1 +1,18 @@
-<p>slider works!</p>
+<div class="slider">
+    <div class="slider__track">
+        @for (item of items(); track $index) {
+            <a class="slider__slide" [href]="item.link">
+                <img [src]="'https://picsum.photos/seed/slider' + $index + '/600/400'" alt="" class="slider__bg" />
+                <div class="slider__overlay"></div>
+                <div class="slider__content">
+                    <h3 class="slider__title">{{ item.title }}</h3>
+                    <p class="slider__description">{{ item.content }}</p>
+                    <span class="slider__link">
+                        Lorem ipsum
+                        <img src="assets/download.svg" alt="" />
+                    </span>
+                </div>
+            </a>
+        }
+    </div>
+</div>

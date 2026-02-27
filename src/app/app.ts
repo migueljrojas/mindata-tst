@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Section, SearchInput, ArticleCard, Slider } from './components';
 import { ArticleData } from './components/article-card/article-card';
 import articles from './data/articles.json';
+import sliderItems from './data/slider.json';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +14,5 @@ import articles from './data/articles.json';
 export class App {
   protected readonly title = signal('riu-challenge');
   protected readonly articles = signal<ArticleData[]>(articles);
+  protected readonly sliderItems = signal<ArticleData[]>(sliderItems);
 }

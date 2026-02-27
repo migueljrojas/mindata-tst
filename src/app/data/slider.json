@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Lorem ipsum",
+    "content": "Lorem ipsum dolor sit amet consectetur.",
+    "date": "Feb 26, 2026",
+    "link": "/slider/1"
+  },
+  {
+    "title": "Lorem ipsum",
+    "content": "Lorem ipsum dolor sit amet consectetur.",
+    "date": "Feb 20, 2026",
+    "link": "/slider/2"
+  },
+  {
+    "title": "Lorem ipsum",
+    "content": "Lorem ipsum dolor sit amet consectetur.",
+    "date": "Feb 15, 2026",
+    "link": "/slider/3"
+  },
+  {
+    "title": "Lorem ipsum",
+    "content": "Lorem ipsum dolor sit amet consectetur.",
+    "date": "Feb 10, 2026",
+    "link": "/slider/4"
+  }
+]
