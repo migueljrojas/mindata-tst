@@ -1,11 +1,11 @@
-<div class="article-card" [class.article-card--main]="highlight()">
-    <a [href]="data().link" class="article-card__image">
-        <img [src]="imageUrl" alt="article-card-image" />
+<article class="article-card" [class.article-card--main]="highlight()">
+    <a [href]="data().link" class="article-card__image" [attr.aria-label]="data().title">
+        <img [src]="imageUrl" [alt]="data().title" />
     </a>
     <div class="article-card__content">
         <div class="article-card__date">
-            <img src="assets/calendar.svg" alt="calendar" />
-            <span>{{ data().date }}</span>
+            <img src="assets/calendar.svg" alt="" aria-hidden="true" />
+            <time>{{ data().date }}</time>
         </div>
         <h3 class="article-card__title">
             <a [href]="data().link">{{ data().title }}</a>
@@ -17,4 +17,4 @@
             </div>
         }
     </div>
-</div>
+</article>

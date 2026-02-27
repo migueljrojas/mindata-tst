@@ -1,13 +1,13 @@
-<div class="slider">
-    <div class="slider__track">
+<div class="slider" role="region" aria-label="Featured articles carousel">
+    <div class="slider__track" role="list">
         @for (item of items(); track $index) {
-            <a class="slider__slide" [href]="item.link">
-                <img [src]="'https://picsum.photos/seed/slider' + $index + '/600/400'" alt="" class="slider__bg" />
-                <div class="slider__overlay"></div>
+            <a class="slider__slide" [href]="item.link" role="listitem" [attr.aria-label]="item.title">
+                <img [src]="'https://picsum.photos/seed/slider' + $index + '/600/400'" alt="" aria-hidden="true" class="slider__bg" />
+                <div class="slider__overlay" aria-hidden="true"></div>
                 <div class="slider__content">
                     <h3 class="slider__title">{{ item.title }}</h3>
                     <p class="slider__description">{{ item.content }}</p>
-                    <span class="slider__link">
+                    <span class="slider__link" aria-hidden="true">
                         Lorem ipsum
                         <img src="assets/download.svg" alt="" />
                     </span>
